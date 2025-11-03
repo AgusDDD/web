@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background-color: #f7f9fc;
+    color: #1c1c1c;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px 60px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo img {
+    width: 140px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #1c2741;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+.activo {
+    color: #0a84ff;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 80px 10%;
+    background: #eef3f9;
+    border-bottom: 1px solid #dfe6ee;
+}
+
+.hero-texto h1 {
+    font-size: 52px;
+    color: #1c2741;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    font-size: 20px;
+    color: #555;
+}
+
+.hero-img img {
+    width: 100%;
+}
+
+.contenido {
+    padding: 80px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 50px;
+    background-color: #fff;
+}
+
+.bloque {
+    background: #fdfdfd;
+    border: 1px solid #dce2eb;
+    border-left: 4px solid #0a84ff;
+    padding: 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.bloque:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+}
+
+.bloque h2 {
+    color: #1c2741;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.bloque p {
+    color: #444;
+    font-size: 17px;
+}
+
+.bloque ul {
+    list-style: none;
+}
+
+.bloque ul li {
+    padding: 6px 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.frase {
+    text-align: center;
+    padding: 60px 10%;
+    font-size: 22px;
+    font-style: italic;
+    color: #0a84ff;
+    background-color: #f1f5fb;
+    border-top: 1px solid #dce2eb;
+}
+
+footer {
+    background-color: #1c2741;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-content p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-img {
+        margin-top: 30px;
+    }
+
+    .contenido {
+        grid-template-columns: 1fr;
+        padding: 50px 5%;
+    }
+    .hero-img img.activa {
+    opacity: 1;
+}
+}
+
+.Cuadro-Blanco {
+    color: black;
+    background-color: white;
+    padding: 80px 150px;
+    font-size: 20px;
+    
+}
+
+.imagen-articulo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ form {
+      background-color: #ffffff;
+      width: 400px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .botones {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #2980b9;
+    }
+.hero-img {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.hero-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center; 
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-img img.activa {
+    opacity: 1;
+}
